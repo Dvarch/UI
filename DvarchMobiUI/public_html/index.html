@@ -1,0 +1,120 @@
+<!doctype html>
+<!-- Conditional comment for mobile ie7 blogs.msdn.com/b/iemobile/ -->
+<!--[if IEMobile 7 ]>    <html class="no-js iem7" lang="en"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+
+  <title></title>
+  <meta name="description" content="">
+
+  <!-- Mobile viewport optimization h5bp.com/ad -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+<!-- <meta http-equiv="cleartype" content="on"> -->
+
+  <!-- more tags for your 'head' to consider h5bp.com/d/head-Tips -->
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+    <style>
+       .roundabout-holder {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            height: 300px;;
+            width: 100%;;
+       }
+       .roundabout-moveable-item {
+           /* height: 200px;
+            width: 300px;*/
+            cursor: pointer;
+            background-color: #ccc;
+            border: 1px solid #999;
+       }
+       .roundabout-in-focus {
+            cursor: auto;
+       }
+    </style>
+  
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+
+
+</head>
+
+<body>
+<div data-role="page" id="page1" data-theme="a">
+    <div data-role="header"  data-position="fixed" data-theme="a">
+        <div data-role="controlgroup" data-type="horizontal">
+         <a href="#" data-role="button"  data-icon="plus" >Новый</a>
+         <a href="#" data-role="button"  data-icon="grid" >Профиль</a>
+         <a href="#defaultpanel" data-role="button" data-icon="gear">Настройки</a>
+        </div>
+    </div> 
+
+ 
+    <div data-role="content" >   
+         <ul>
+            <li><a href="#main"><img src="img/gs.jpg"/></a></li>
+            <li><a href="#main"><img src="img/gs.jpg"/></a></li>
+            <li><a href="#main"><img src="img/gs.jpg"/></a></li>
+            <li><a href="#main"><img src="img/gs.jpg"/></a></li>
+            <li><a href="#main"><img src="img/gs.jpg"/></a></li>
+            <li><a href="#main"><img src="img/gs.jpg"/></a></li>
+            <li><a href="#main"><img src="img/gs.jpg"/></a></li>
+       
+        </ul>
+    
+  </div>
+    
+    
+  <div data-role="footer" data-position="fixed">
+    <h4></h4>
+  </div> 
+</div>    
+
+    
+<div data-role="page"  id="main" data-position="fixed" >
+    <div data-role="header" style="overflow:hidden;" data-position="fixed" data-theme="a">
+   
+    </div> 
+
+	<div data-role="content" >
+            <div class="center" style="width: 100%"><a href="#page1"><img style="width: 100%" src="img/gs.jpg" alt="Карточка"/></a></div>
+
+	<div data-role="footer" data-position="fixed">
+		<h4></h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>');</script>
+
+  <!-- scripts concatenated and minified via ant build script-->
+  <script src="js/helper.js"></script>
+  <!-- end scripts-->
+
+  <!-- Debugger - remove for production -->
+  <!-- <script src="https://getfirebug.com/firebug-lite.js"></script> -->
+
+  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+       mathiasbynens.be/notes/async-analytics-snippet -->
+
+    <script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+    <script src="js/libs/jquery.roundabout.min.js"></script>
+    <script>
+       $(document).ready(function() {
+          $('ul').roundabout();
+       });
+    </script>
+</body>
+</html>
